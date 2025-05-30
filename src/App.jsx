@@ -4,9 +4,9 @@ import Header from "./components/Header";
 import LogIn from "./components/log-in";
 import SignUp from "./components/sign-up";
 import Profile from "./components/profile";
-import CreatePost from "./components/CreatePost";
-import { PostsProvider, PostsContext } from "./components/PostContext";
 
+import { PostsProvider, PostsContext } from "./components/PostContext";
+// import ReceiveFromBack from "./components/ReceiveFromBack";
 
 const Dashboard = () => {
   const { posts } = React.useContext(PostsContext);
@@ -33,15 +33,14 @@ const Dashboard = () => {
   );
 };
 
-
 const Home = () => (
   <div className="text-center mt-16">
     <h1 className="text-3xl font-bold">Welcome to Posts!</h1>
     <p className="mt-2 text-gray-600">This is your home page after login or sign-up.</p>
+    <ReceiveFromBack />
     <Dashboard />
   </div>
 );
-
 
 function App() {
   return (
